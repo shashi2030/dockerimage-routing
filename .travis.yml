@@ -8,6 +8,6 @@ script:
     - docker push $DOCKER_USERNAME/dockerimage-routing
 
 after_success:
-    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - docker tag dockerimage-routing $DOCKER_USER/dockerimage-routing:latest
-    - docker push $DOCKER_USER/dockerimage-routing:latest
+    - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+    - docker tag dockerimage-routing "$DOCKER_USER"/dockerimage-routing:latest
+    - docker push "$DOCKER_USER"/dockerimage-routing:latest
