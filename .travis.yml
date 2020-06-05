@@ -5,7 +5,7 @@ services:
 before_install:
     - docker build -t dockerimage-routing -f Dockerfile.prod .
 script:
-    - docker push $DOCKER_USERNAME/dockerimage-routing
+    - docker push $DOCKER_USER/dockerimage-routing
 
 after_success:
     - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
